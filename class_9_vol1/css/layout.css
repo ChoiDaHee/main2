@@ -1,0 +1,106 @@
+body{
+    background: #74cafc;
+    font-family: 'NanumSquare', sans-serif !important;
+}
+.wrap{
+    text-align: center;
+}
+
+/* header */
+.header{
+    padding-top: 110px;
+}
+.header > img{}
+
+
+/* container */
+.container{}
+.container .section.mainInfo{
+    width: 960px;
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 23px 23px 13px rgba(39, 166, 240, .25);
+}
+.container .section.mainInfo > img{}
+.container .section.mainInfo > ol{
+
+}
+.container .section.mainInfo > ol > li{
+    display: inline-block;
+    width: 209px;
+    height: 209px;
+    background: url(../img/img_circle_01.png) no-repeat;
+    vertical-align: middle;
+    position: relative;
+}
+.container .section.mainInfo > ol > li + li{
+    margin-left: 72px;
+}
+.container .section.mainInfo > ol > li + li::before{
+    content: "";
+    display: block;
+    width: 31px;
+    height: 40px;
+    background: url(../img/img_arr.png);
+    position: absolute;
+    left: -52px;
+    /* 세로 중앙에 위치하기 위한 처리 */
+    top: 50%;
+    margin-top: -20px;
+    
+}
+.container .section.mainInfo > ol > li:nth-child(2){
+    background-image:url(../img/img_circle_02.png)
+}
+.container .section.mainInfo > ol > li:nth-child(3){
+    background-image:url(../img/img_circle_03.png)
+}
+.container .section.mainInfo > ol > li .tit{
+    margin: 77px 0 10px;
+    display: inline-block;
+    font-size: 27px;
+}
+.container .section.mainInfo > ol > li .subs{
+    transform: skew(-0.05deg); /* 나눔스퀘어 폰트에서 작은 폰트시 깨지는 부분을 방지처리*/
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #3f3f3f;
+}
+.container .section.mainInfo .comment{
+    font-size: 18px;
+    color: #666;
+    font-weight: bold;
+    padding: 30px 0 122px;
+}
+
+.container .section.submit{
+    margin-top: -50px;
+    position: relative;
+    min-width: 960px;
+    margin-bottom: 85px;
+}
+.container .section.submit::before{
+    content: "";
+    display: block;
+    height: 45px;
+    width: 100%;
+    background: #00f0ee;
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+
+}
+.container .section.submit .btn-submit{
+    width: 301px;
+    height: 141px;
+    display: inline-block;
+    border: 13px solid #fff;
+    box-sizing: border-box;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 115px; /*border가 있을경우 height값에서 border값+2를 뺀 수를 입력(box-sizing=border-box값 있을시)*/
+    background: #ff577f;
+    box-shadow: 23px 23px 13px rgba(39, 166, 240, .25);
+}

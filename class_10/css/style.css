@@ -1,0 +1,412 @@
+
+/* foullpage navigation */
+#fp-nav{
+
+}
+#fp-nav > ul{
+
+}
+#fp-nav > ul > li{
+    text-align: right;
+}
+#fp-nav > ul > li+li{
+    margin-top: 1px;
+}
+#fp-nav > ul > li > a{
+    display: block;
+}
+#fp-nav > ul > li > a > span{
+    display: inline-block;
+    background: #09131b;
+    color: #fff;
+    padding: 5px 10px 5px 20px;
+    font-size: 13px;
+    transform: translateX( calc(100% - 20px) );
+    transition: transform 0.5s;
+}
+#fp-nav > ul > li.active > a > span{
+    transform: translateX(0);
+}
+
+/* common */
+body{
+    min-width: 1024px;
+    background: #d5dee5;
+}
+.inner{
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+/* main */
+/* 배경 */
+#section0 .wrap-bg{}
+#section0 .wrap-bg .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/img_main_01.jpg) no-repeat center center;
+    background-size: cover;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 0.5s;
+}s
+#section0 .wrap-bg .bg.bg-1{}
+#section0 .wrap-bg .bg.bg-2{
+    background: url(../img/img_main_02.jpg);
+}
+#section0 .wrap-bg .bg.bg-3{
+    background: url(../img/img_main_03.jpg);
+}
+#section0 .wrap-bg.select-1 .bg.bg-1,
+#section0 .wrap-bg.select-2 .bg.bg-2,
+#section0 .wrap-bg.select-3 .bg.bg-3{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* 버튼영역 */
+#section0 .wrap-link{
+    text-align: center;
+    position: absolute;
+    width: 772px;
+    height: 390px;
+    top: 50%;
+    left: 50%;
+    margin: -195px 0 0 -386px;
+}
+#section0 .wrap-link .unit{}
+#section0 .wrap-link .unit > a{
+    color: #fff;
+    font-weight: bold;
+    font-size: 130px;
+    line-height: 130px;
+    opacity: 0.4;
+    height: 130px;
+    overflow-y: hidden;
+    display: inline-block;
+}
+#section0 .wrap-link .unit > a:hover{
+    opacity: 1;
+}
+/* 오브젝트 */
+#section0 .ico{
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: url(../img/ico_01.png) no-repeat center center;
+    background-size: auto 100%;
+    position: absolute;
+    left: 50%;
+    
+}
+#section0 .ico.ico-1{
+    top: 50%;
+    margin: -310px 0 0 330px;
+}
+#section0 .ico.ico-2{
+    width: 556px;
+    height: 336px;
+    background-image: url(../img/ico_02.png);
+    bottom: -220px;
+    margin-left: -890px;
+}
+
+/* PROFILE */
+#section1 .wrap-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#section1 .wrap-bg .bg{
+    height: 100px;
+    
+}
+
+/* 첫번째 배경 animation */
+#section1 .wrap-bg.select-1 .bg{
+    background: url(../img/section1_txt_0.png);
+    animation: ani-bg1 6s linear infinite;
+}
+@keyframes ani-bg1{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -690px 0;
+    }
+}
+#section1 .wrap-bg.select-1 .bg.reverse{
+    animation-name: ani-bg1-reverse;
+}
+@keyframes ani-bg1-reverse{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 690px 0;
+    }
+}
+/* 두번째 배경 animation */
+#section1 .wrap-bg.select-2 .bg{
+    background: url(../img/section1_txt_1.png);
+    animation: ani-bg2 6s linear infinite;
+}
+@keyframes ani-bg2{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -634px 0;
+    }
+}
+#section1 .wrap-bg.select-2 .bg.reverse{
+    animation-name: ani-bg2-reverse;
+}
+@keyframes ani-bg2-reverse{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 634px 0;
+    }
+}
+/* 세번째 배경 animation */
+#section1 .wrap-bg.select-3 .bg{
+    background: url(../img/section1_txt_2.png);
+    animation: ani-bg3 6s linear infinite;
+}
+@keyframes ani-bg3{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -783px 0;
+    }
+}
+#section1 .wrap-bg.select-3 .bg.reverse{
+    animation-name: ani-bg3-reverse;
+}
+@keyframes ani-bg3-reverse{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 783px 0;
+    }
+}
+
+#section1 .wrap-link{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -40px;
+}
+#section1 .wrap-link .unit{
+    display: inline-block;
+}
+#section1 .wrap-link .unit + .unit::before{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 5px;
+    background: #000;
+    margin: 0 20px;
+    /* vertical-align: middle; */
+}
+#section1 .wrap-link .unit a{
+    font-size: 80px;
+    font-weight: bold;
+    /* vertical-align: middle; */
+}
+#section1 .wrap-link .unit a:hover{
+    color: #fff;
+}
+
+/* skill */
+/* 배경 */
+#section2 .wrap-wave{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#section2 .wrap-wave .inner{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#section2 .wrap-wave .unit{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #98d3f3;
+    transition: transform 1s ease-in-out;
+    transform: translateY(calc(100% - 50px));
+} 
+
+#section2 .wrap-wave .unit .wave{
+    height: 50px;
+    background: #b6e4fb;
+}
+
+#section2 .wrap-wave .unit .wave::before,
+#section2 .wrap-wave .unit .wave::after{
+    content: "";
+    display: block;
+    width: 4800px;
+    height: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: url(../img/bg_wave.png) 0 0;
+    background-size: 2400px 50px;
+    opacity: 0.1;
+}
+#section2 .wrap-wave .unit .wave::before{
+    animation: ani_wave1 5s linear infinite;
+}
+@keyframes ani_wave1{
+    0%{transform: translateX(-500px);}
+    100%{transform: translateX(-2900px);}
+}
+#section2 .wrap-wave .unit .wave::after{
+    animation: ani_wave2 7s linear infinite;
+}   
+@keyframes ani_wave2{
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(-2400px);}
+}
+
+#section2 .wrap-wave .unit .num{
+    font-size: 80px;
+    color: #fff;
+    opacity: 0.5;
+    margin-left: 30px;
+    
+} 
+#section2 .wrap-wave .unit .num > strong{}
+/* 버튼영역 */
+#section2 .wrap-link{
+    text-align: right;
+    position: absolute;
+    bottom: 50%;
+    right: 150px;
+}
+#section2 .wrap-link .unit{
+
+}
+#section2 .wrap-link .unit > a{
+    font-size: 80px;
+    font-weight: bold;
+    color: #2d3a42;
+    height: 90px;
+    line-height: 90px;
+    overflow-y: hidden;
+}
+#section2 .wrap-link .unit > a:hover{
+    color: #fff;
+}
+
+/* portfolio */
+#section3 .wrap-photo .slick-slide{
+    padding: 0 10px;
+}
+#section3 .wrap-photo .slick-slide img{
+    width: 860px;
+    height: 520px;
+}
+#section3 .wrap-txt{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 224px;
+}
+#section3 .wrap-txt > ul{
+    position: relative;
+    height: 95px;
+    overflow: hidden;
+}
+#section3 .wrap-txt > ul > li{
+    font-size: 86px;
+    font-weight: bold;
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    transition: top ;
+}
+#section3 .wrap-txt > ul > li.select{
+    top: 0;
+}
+
+/* 갤러리 위치시 커서 없앰 */
+#section3 .wrap-photo{
+    cursor: none;
+}
+#section3 .wrap-photo .cursor{
+    display: block;
+    width: 30px;
+    height:30px;
+    background: red;
+    border-radius: 100%;
+    position: absolute;
+    pointer-events: none; /*커서 클릭시 해당 오브젝트 무시*/
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+
+#section3 .wrap-photo:hover .cursor{
+    transform: scale(1);
+}
+#section3 .wrap-photo:active .cursor{
+    transform: scale(2);
+}
+
+#section4{
+
+}
+#section4 .wrqp-typo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -180px 0 0 -1150px;
+}
+#section4 .wrap-typo .wrap-typo-inner{
+    position: relative;
+}
+#section4 .wrap-input{
+    position: ;
+}
+#section4 .wrap-input > form{
+
+}
+#section4 .wrap-input > form .group{
+    position: relative;
+    margin-bottom: 45px;
+}
+#section4 .wrap-input > form .group > input{
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    width: 300px;
+    border: 0;
+    background-color: transparent; /*투명색*/
+    border-bottom: 1px solid #757575;
+    color: #fff;
+    outline: none;
+}
+#section4 .wrap-input > form .group .highlight{
+    
+}

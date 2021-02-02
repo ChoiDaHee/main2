@@ -1,0 +1,556 @@
+
+/* fullpage navigation */
+#fp-nav{}
+#fp-nav > ul{}
+#fp-nav > ul > li{
+    text-align: right;
+}
+#fp-nav > ul > li + li{
+    margin-top: 1px;
+}
+#fp-nav > ul > li > a{
+    display: block;
+}
+#fp-nav > ul > li > a > span{
+    display: inline-block;
+    background: #09131b;
+    color: #fff;
+    padding: 5px 10px 5px 20px;
+    font-size: 13px;
+    transform: translateX( calc(100% - 20px) );
+    transition: transform 0.5s;
+}
+#fp-nav > ul > li.active > a > span{
+    transform: translateX(0);
+}
+
+/****** common ******/
+body{
+    min-width: 1024px;
+    background:#d5dee5;
+}
+.inner{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+/* section별 인트로 효과 */
+.section .ani-obj{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s;
+}
+.section.on .ani-obj{
+    opacity: 1;
+    transform: translateY(0);
+}
+.section .ani-obj.on-1{
+    transition-delay: 0s !important;
+}
+.section .ani-obj.on-2{
+    transition-delay: 0.3s !important;
+}
+.section .ani-obj.on-3{
+    transition-delay: 0.6s !important;
+}
+.section .ani-obj.on-4{
+    transition-delay: 0.9s !important;
+}
+.section .ani-obj.on-5{
+    transition-delay: 1.2s !important;
+}
+
+
+/****** main ******/
+/* 배경 */
+#section0 .wrap-bg{}
+#section0 .wrap-bg .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/img_main_01.jpg) no-repeat center center;
+    background-size: cover;
+    transform: scale(1);
+    opacity: 0;
+    transition: all .5s;
+}
+#section0 .wrap-bg .bg.bg-1{}
+#section0 .wrap-bg .bg.bg-2{
+    background-image: url(../img/img_main_02.jpg);
+}
+#section0 .wrap-bg .bg.bg-3{
+    background-image: url(../img/img_main_03.jpg);
+}
+#section0 .wrap-bg.select-1 .bg.bg-1,
+#section0 .wrap-bg.select-2 .bg.bg-2,
+#section0 .wrap-bg.select-3 .bg.bg-3{
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* 버튼영역 */
+#section0 .wrap-link{
+    text-align: center;
+    position: absolute;
+    width: 772px;
+    height: 390px;
+    top:50%;
+    left: 50%;
+    margin: -195px 0 0 -386px;
+}
+#section0 .wrap-link .unit{}
+#section0 .wrap-link .unit > a{
+    color: #fff;
+    font-weight: bold;
+    font-size: 130px;
+    line-height: 130px;
+    opacity: .4;
+    height: 130px;
+    overflow-y: hidden;
+    display: inline-block;
+}
+#section0 .wrap-link .unit > a:hover{
+    opacity: 1;
+}
+/* 오브젝트 */
+#section0 .ico{
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: url(../img/ico_01.png) no-repeat center center;
+    background-size: auto 100%;
+    position: absolute;
+    left: 50%;
+    transition: transform 1s ease-out;
+    z-index: 10;
+}
+#section0 .ico.ico-1{
+    top: 50%;
+    margin: -310px 0 0 330px;
+}
+#section0 .ico.ico-2{
+    width: 556px;
+    height: 376px;
+    background-image: url(../img/ico_02.png);
+    bottom: -220px;
+    margin-left: -890px;
+}
+
+/****** profile ******/
+#section1 .wrap-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#section1 .wrap-bg .bg{
+    height: 100px;
+    
+}
+
+/* 첫번째 배경 animation */
+#section1 .wrap-bg.select-1 .bg{
+    background: url(../img/section1_txt_0.png);
+    animation:ani-bg1 6s linear infinite;
+}
+@keyframes ani-bg1{
+    0%{background-position: 0 0;}
+    100%{background-position: -690px 0;}
+}
+#section1 .wrap-bg.select-1 .bg.reverse{
+    animation-name: ani-bg1-reverse;
+}
+@keyframes ani-bg1-reverse{
+    0%{background-position: 0 0;}
+    100%{background-position: 690px 0;}
+}
+/* 두번째 배경 animation */
+#section1 .wrap-bg.select-2 .bg{
+    background: url(../img/section1_txt_1.png);
+    animation:ani-bg2 6s linear infinite;
+}
+@keyframes ani-bg2{
+    0%{background-position: 0 0;}
+    100%{background-position: -634px 0;}
+}
+#section1 .wrap-bg.select-2 .bg.reverse{
+    animation-name: ani-bg2-reverse;
+}
+@keyframes ani-bg2-reverse{
+    0%{background-position: 0 0;}
+    100%{background-position: 634px 0;}
+}
+/* 세번째 배경 animation */
+#section1 .wrap-bg.select-3 .bg{
+    background: url(../img/section1_txt_2.png);
+    animation:ani-bg3 6s linear infinite;
+}
+@keyframes ani-bg3{
+    0%{background-position: 0 0;}
+    100%{background-position: -783px 0;}
+}
+#section1 .wrap-bg.select-3 .bg.reverse{
+    animation-name: ani-bg3-reverse;
+}
+@keyframes ani-bg3-reverse{
+    0%{background-position: 0 0;}
+    100%{background-position: 783px 0;}
+}
+
+#section1 .wrap-link{
+    text-align: center;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 50%;
+    margin-top:-40px
+}
+#section1 .wrap-link .unit{
+    display: inline-block;
+}
+#section1 .wrap-link .unit + .unit:before{
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 5px;
+    background: #000;
+    margin: 0 20px;
+    /* vertical-align: middle; */
+}
+#section1 .wrap-link .unit a{
+    font-size: 80px;
+    font-weight: bold;
+    /* vertical-align: middle; */
+}
+#section1 .wrap-link .unit a:hover{
+    color: #fff;
+}
+
+/****** skill ******/
+/* 배경 */
+#section2 .wrap-wave{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#section2 .wrap-wave .inner{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#section2 .wrap-wave .unit{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #98d3f3;
+    transition: transform 1s ease-in-out;
+    transform: translateY(calc(100% - 50px));
+}
+#section2 .wrap-wave .unit .wave{
+    height:50px;
+    background: #b6e4fe;
+}
+#section2 .wrap-wave .unit .wave:before,
+#section2 .wrap-wave .unit .wave:after{
+    content: '';
+    display: block;
+    width: 4800px;
+    height: 50px;
+    position: absolute;
+    left:0;
+    background: url(../img/bg_wave.png) 0 0;
+    background-size: 2400px 50px;
+    opacity: .1;
+}
+#section2 .wrap-wave .unit .wave:before{
+    animation: ani_wave1 5s linear infinite;
+}
+@keyframes ani_wave1{
+    0%{transform: translateX(-500px);}
+    100%{transform: translateX(-2900px);}
+}
+#section2 .wrap-wave .unit .wave:after{
+    animation: ani_wave2 7s linear infinite;
+}
+@keyframes ani_wave2{
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(-2400px);}
+}
+
+#section2 .wrap-wave .unit .num{
+    font-size: 80px;
+    color: #fff;
+    opacity: 0.5;
+    margin-left: 30px;
+}
+#section2 .wrap-wave .unit .num > strong{}
+/* 버튼영역 */
+#section2 .wrap-link{
+    text-align: right;
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+}
+#section2 .wrap-link .unit{}
+#section2 .wrap-link .unit > a{
+    font-size: 80px;
+    font-weight: bold;
+    color: #2d3a42;
+    height: 90px;
+    line-height: 90px;
+    overflow-y: hidden;
+}
+#section2 .wrap-link .unit > a:hover{
+    color: #fff;
+}
+
+/* portfolio */
+#section3 .wrap-photo .slick-slide{
+    padding: 0 10px;
+}
+#section3 .wrap-photo .slick-slide img{
+    width: 860px;
+    height: 520px;
+}
+
+#section3 .wrap-txt{
+    position: absolute;
+    top:50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top:224px ;
+}
+#section3 .wrap-txt > ul{
+    position: relative;
+    height: 95px;
+    overflow: hidden;
+}
+#section3 .wrap-txt > ul > li{
+    font-size: 86px;
+    font-weight: bold;
+    position: absolute;
+    top:95px;
+    width:100%;
+    transition:top .5s ease-in-out;
+}
+#section3 .wrap-txt > ul > li.select{
+    top:0;
+}
+
+/* 갤러리 위치시 커서 없앰 */
+#section3 .wrap-photo{
+    cursor:none;
+}
+#section3 .wrap-photo .cursor{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 100%;
+    position: absolute;
+    pointer-events:none; /*  해당 오브잭트 이벤트 무시 */
+    transform: scale(0);
+    transition: transform .2s;
+}
+#section3 .wrap-photo:hover .cursor{
+    transform: scale(1);
+}
+#section3 .wrap-photo:active .cursor{
+    transform: scale(2);
+}
+
+
+/* contact */
+#section4{}
+
+/* 타이핑 텍스트 */
+#section4 .wrap-typo{
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin: -180px 0 0 -1150px;
+}
+#section4 .wrap-typo .wrap-typo-inner{
+    position: relative;
+}
+#section4 .wrap-typo .wrap-typo-inner > span{
+    position: absolute;
+    display: inline-block;
+    top:0;
+    left:600px;
+    font-size:200px
+}
+
+/* 타이핑 텍스트를 움직이게 하기 위한 animation 설정(움직이는 경로가 되는 라인정보(svg) */
+#section4 .wrap-typo .wrap-typo-inner > span.ani-0{
+    animation: key_ani0 1s linear forwards; /*forwards : 한번만*/
+    motion-path: path("m568.5,256.453125c-41,-79 -138,-113 -270,-92c-132,21 -261,94 -280,129");
+    offset-path: path("m568.5,256.453125c-41,-79 -138,-113 -270,-92c-132,21 -261,94 -280,129");
+}
+
+/* 타이핑 텍스트를 sgv 라인정보대로 움직이게 하는 키프레임 */
+@keyframes key_ani0{
+    0%{offset-distance: 0%; opacity: 1;}
+    100%{offset-distance: 100%; opacity: 0;}
+}
+/* 타이핑 텍스트를 움직이게 하기 위한 animation 설정(움직이는 경로가 되는 라인정보(svg) */
+#section4 .wrap-typo .wrap-typo-inner > span.ani-1{
+    animation: key_ani1 1s linear forwards; /*forwards : 한번만*/
+    motion-path: path("m560.5,49.453125c-26,-42 -203,-70 -274,34c-71,104 -107,302 -107.5,301.546875");
+    offset-path: path("m560.5,49.453125c-26,-42 -203,-70 -274,34c-71,104 -107,302 -107.5,301.546875");
+}
+
+/* 타이핑 텍스트를 sgv 라인정보대로 움직이게 하는 키프레임 */
+@keyframes key_ani1{
+    0%{offset-distance: 0%; opacity: 1;}
+    100%{offset-distance: 100%; opacity: 0;}
+}
+/* 타이핑 텍스트를 움직이게 하기 위한 animation 설정(움직이는 경로가 되는 라인정보(svg) */
+#section4 .wrap-typo .wrap-typo-inner > span.ani-2{
+    animation: key_ani2 1s linear forwards; /*forwards : 한번만*/
+    motion-path: path("m559.5,353.453125c-28,-127 -100,-281 -221,-300c-121,-19 -274,206 -293,314");
+    offset-path: path("m559.5,353.453125c-28,-127 -100,-281 -221,-300c-121,-19 -274,206 -293,314");
+
+}
+
+/* 타이핑 텍스트를 sgv 라인정보대로 움직이게 하는 키프레임 */
+@keyframes key_ani2{
+    0%{offset-distance: 0%; opacity: 1;}
+    100%{offset-distance: 100%; opacity: 0;}
+}
+
+/* 입력부분 */
+
+#section4 .wrap-input{
+    position: absolute;
+    left:50%;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background: #272d39;
+}
+#section4 .wrap-input > form{
+    position: absolute;
+    left: 0%;
+    top:50%;
+    margin: -80px 0 0 30px;
+}
+#section4 .wrap-input > form .group{
+    position: relative;
+    margin-bottom: 45px;
+}
+#section4 .wrap-input > form .group > input{
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    width: 300px;
+    border:0;
+    background-color: transparent; /*투명색*/
+    border-bottom: 1px solid #757575;
+    color: #fff;
+    outline:none;
+}
+#section4 .wrap-input > form .group .highlight{}
+#section4 .wrap-input > form .group .bar{
+    position: relative;
+    display: block;
+    width:300px;
+}
+#section4 .wrap-input > form .group .bar:before,
+#section4 .wrap-input > form .group .bar:after{
+    content: '';
+    height:2px;
+    width: 0px;
+    bottom:0;
+    position: absolute;
+    background: #fff;
+    transition: width 0.2s;
+}
+#section4 .wrap-input > form .group .bar:before{
+    left:50%
+}
+#section4 .wrap-input > form .group .bar:after{
+    right:50%
+}
+
+/* input에 커서가 이동했을때 */
+#section4 .wrap-input > form .group > input:focus ~ .bar:before,
+#section4 .wrap-input > form .group > input:focus ~ .bar:after{
+    width:150px;
+}
+
+#section4 .wrap-input > form .group > label{
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    left: 0px;
+    top:-20px;
+}
+
+/* 프리로드 */
+.wrap-hidden-img{
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+}
+
+.wrap-loading{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+    overflow: hidden;
+}
+.wrap-loading:before,
+.wrap-loading:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    transition: transform 0.7s;
+}
+
+.wrap-loading:before{
+    top: 0;
+    background: linear-gradient(#f74be9 #a17aea );
+}
+.wrap-loading:after{
+    top: 50%;
+    background: linear-gradient(#a17aea #08c3d7 );
+}
+/* 프리로딩 퍼센트 숫자 표시*/
+.wrap-loading .num{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 50px;
+    z-index: 2;
+    color: #fff;
+    display: block;
+    height: 1px;
+    width: 30px;
+    background: #fff;
+    transition: opacity 0.3s;
+    text-align: right;
+}
+.wrap-loading.on .num{
+    opacity: 0  ;
+}
+/* 프리로딩 완료시점 */
+.wrap-loading.on:before{
+    transform: translateY(-100%);
+}
+.wrap-loading:after{
+    transform: translateY(100%);
+}

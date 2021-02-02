@@ -1,0 +1,61 @@
+body{
+    background: #74cafc;
+    font-family: 'NanumSquare', sans-serif !important;
+}
+.wrap{
+    text-align: center;
+}
+
+/* header */
+.header{
+    padding-top: 110px;
+}
+.header > img{
+
+}
+
+/* container */
+.container{
+
+}
+.container .section.mainInfo{
+    width: 960px;
+    background: #fff;
+    margin: 0 auto;
+}
+.container .section.mainInfo > img{
+
+}
+.container .section.mainInfo > ol{
+    text
+}
+.container .section.mainInfo > ol > li{
+    display: inline-block;
+    width: 209px;
+    height: 209px;
+    background: url(../img/img_circle_01.png) no-repeat;
+}
+.container .section.mainInfo > ol > li:nth-child(2){
+    background: url(../img/img_circle_02.png);
+}
+.container .section.mainInfo > ol > li:nth-child(3){
+    background: url(../img/img_circle_03.png);
+}
+.container .section.mainInfo > ol > li .tit{
+    margin-top: 77px;
+    display: inline-block;
+    font-size: 27px;
+}
+.container .section.mainInfo > ol > li .subs{
+
+}
+.container .section.mainInfo .comment{
+
+}
+
+.container .section.submit{
+
+}
+.container .section.submit .btn-submit{
+
+}

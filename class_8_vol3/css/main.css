@@ -1,0 +1,73 @@
+.container{}
+
+.section.visual{}
+.section.visual .slider{}
+.section.visual .slider .unit{
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+.section.visual .slider .unit img{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.section.visual .slider .unit img.pc{}
+.section.visual .slider .unit img.m{
+    display: none;
+}
+.section.visual .slider .inner{}
+.section.visual .slider .inner .box-msg{
+    float: right;
+    background: rgba(106, 57, 6, 0.8);
+    padding: 10px;
+    margin-top: 35px;
+}
+.section.visual .slider .inner .box-msg-inner{
+    border:3px solid #fff;
+    width: 312px;
+    height: 428px;
+    position: relative;
+}
+.section.visual .slider .inner .box-msg-inner .cont{
+    color: #fff;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 25px;
+    padding: 30px 0 0 130px;
+    line-height: 40px;
+    writing-mode:tb-rl; /* 고서처럼 세로 글씨로 배치됨*/
+
+}
+.section.visual .slider .inner .box-msg-inner .cont:after{
+    content: '';
+    display: block;
+    width: 42px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    left:20px;
+}
+.section.visual .slider .box-msg-2{}
+.section.visual .slider .box-msg-2 > p{}
+.section.visual .slider .box-msg-2 > p:nth-child(2){}
+.section.visual .slider .box-msg-2 > p:nth-child(3){}
+
+
+/* section.banner - 메인 컨텐츠 */
+.section.banner{}
+.section.banner .inner{}
+.section.banner .inner > ul{}
+.section.banner .inner > ul > li{}
+.section.banner .inner > ul > li.unit_1{}
+.section.banner .inner > ul > li.unit_2{}
+.section.banner .inner > ul > li.unit_3{}
+.section.banner .inner > ul > li.unit_2 > p,
+.section.banner .inner > ul > li.unit_3 > p{}
+.section.banner .inner > ul > li > h2{}
+.section.banner .inner > ul > li > h2 .txt_green{}
+.section.banner .inner > ul > li > p{}
+.section.banner .inner > ul > li .btn_detail{}
+.section.banner .inner > ul > li .btn_detail:after{}
+

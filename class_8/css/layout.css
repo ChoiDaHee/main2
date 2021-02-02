@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+html{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+.wrap{
+    min-width: 1200px;
+}
+
+/* common */
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+/* flaot를 해제하기 위한 clear처리 */
+.inner::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.txt-hide{
+
+}
+
+/* header */
+.header{
+    text-align: center;
+    background: url(../img/header_bg.jpg) center center;
+
+}
+.header::after{
+    content: "";
+    display: block;
+    height: 3px;
+    background: url(../img/bg_header_line.jpg) center;
+}
+.header h1{
+
+}
+.header h1 a{
+    display: inline-block;
+    padding-top: 26px;
+}
+.header h1 a .img-logo{
+
+}
+.header .gnb{
+
+}
+.header .gnb .img-logo-m{
+    display: none;
+}
+.header .gnb .navi{
+
+}
+.header .gnb .navi > li{
+    display: inline-block;
+}
+.header .gnb .navi > li > a{
+    display: inline-block;
+    height: 78px;
+    line-height: 78px;
+    font-size: 19px;
+    font-family: 'Nanum Myeongjo', serif;
+    width: 166px;
+    color: #384d33;
+}
+.header .gnb .navi > li > a:hover{
+    font-weight: 700;
+}
+.header .gnb .btn-gnb-close{
+    display: none;
+}
+.header .btn-gnb-ham{
+    display: none;
+}
+
+
+
+/* container */
+.container{
+
+}
+
+
+
+
+
+
+
+
+/* footer */
+.footer{
+    background: #333;
+    padding: 40px 0 25px;
+    color: #777;
+    text-align: center;
+    font-size: 13px;
+    line-height: 23px;
+}
+.footer .info{
+    margin-bottom: 20px;
+}
+.footer .info > span{
+    margin: 0 15px;
+}
+
+
+@media all and (max-width: 1024px){
+    .header{
+        /* height: 89px; */
+    }
+    .header .gnb{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        height: 100vh;
+        z-index: 100;
+        width: 300px;
+        padding: 20px;
+        box-sizing: border-box;
+        transform: translateX(-450px);
+        transition: transform 0.5s;
+    }
+    .header .gnb.on{
+        transform: translateX(0px);
+    }
+    .header .gnb .img-logo-m{
+        display: block;
+        width: 197px;
+    }
+    .header .gnb .navi{
+        margin-top: 45px;
+    }
+    .header .gnb .navi > li{
+        float: none;
+        width: auto;
+        display: block;
+    }
+    .header .gnb .navi > li > a{
+        text-align: left;
+        border-bottom: 1px solid #ebeeef;
+        display: block;
+        width: auto;
+        height: 60px;
+        line-height: 60px;
+    }
+    .header .gnb .btn-gnb-close{
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-indent: -9999px;
+        border: 0;
+        background: #fff url(../img/ico_nav_close.png) no-repeat center center;
+        position: absolute;
+        top: 0;
+        left: 400px;
+    }
+    .header .btn-gnb-ham{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 89px;
+        width: 89px;
+        text-indent: -9999px;
+        border: 0;
+        background: url(../img/ico_nav_ham.png) no-repeat center center;
+    }
+}
+
+@media all and (max-width: 1200px){
+    .wrap{
+        min-width: auto;
+    }
+
+    /* common */
+    .inner{
+        width: auto;
+    }
+}
