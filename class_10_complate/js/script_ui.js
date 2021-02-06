@@ -6,7 +6,7 @@ $(function(){
     $("#fullpage").imagesLoaded().done(function(){ //프리로딩 완료 이벤트
         $(".wrap-loading").addClass("on"); //완료 트렌지션 애니메이션
         setTimeout(function(){
-            $(".wrap-loadin").remove(); //0.7초 후 프리로딩 마크업을 hrml상에서 삭제처리
+            $(".wrap-loading").remove(); //0.7초 후 프리로딩 마크업을 hrml상에서 삭제처리
         },700)
         init(); //프리로딩 완료시점 초기 함수 실행
     }).progress(function(index, image){//프리로딩 이미지가 하나씩 로드 완료시 호출되는 중간과정 이벤트
