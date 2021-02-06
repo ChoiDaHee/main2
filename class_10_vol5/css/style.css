@@ -1,7 +1,5 @@
 
 /* fullpage navigation */
-#fp-nav{}
-#fp-nav > ul{}
 #fp-nav > ul > li{
     text-align: right;
 }
@@ -63,7 +61,6 @@ body{
 
 /****** main ******/
 /* 배경 */
-#section0 .wrap-bg{}
 #section0 .wrap-bg .bg{
     position: absolute;
     top: 0;
