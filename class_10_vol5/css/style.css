@@ -460,7 +460,7 @@ body{
     bottom:0;
     position: absolute;
     background: #fff;
-    transition: width 0.2s;
+    transition: width 0.1s;
 }
 #section4 .wrap-input > form .group .bar:before{
     left:50%
