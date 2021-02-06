@@ -73,7 +73,6 @@ body{
     opacity: 0;
     transition: all .5s;
 }
-#section0 .wrap-bg .bg.bg-1{}
 #section0 .wrap-bg .bg.bg-2{
     background-image: url(../img/img_main_02.jpg);
 }
@@ -284,7 +283,6 @@ body{
     opacity: 0.5;
     margin-left: 30px;
 }
-#section2 .wrap-wave .unit .num > strong{}
 /* 버튼영역 */
 #section2 .wrap-link{
     text-align: right;
@@ -292,7 +290,6 @@ body{
     bottom: 50px;
     right: 150px;
 }
-#section2 .wrap-link .unit{}
 #section2 .wrap-link .unit > a{
     font-size: 80px;
     font-weight: bold;
@@ -363,8 +360,6 @@ body{
 
 
 /* contact */
-#section4{}
-
 /* 타이핑 텍스트 */
 #section4 .wrap-typo{
     position: absolute;
@@ -452,7 +447,6 @@ body{
     color: #fff;
     outline:none;
 }
-#section4 .wrap-input > form .group .highlight{}
 #section4 .wrap-input > form .group .bar{
     position: relative;
     display: block;
