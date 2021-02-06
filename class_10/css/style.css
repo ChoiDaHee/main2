@@ -35,7 +35,6 @@ body{
 
 /* main */
 /* 배경 */
-#section0 .wrap-bg{}
 #section0 .wrap-bg .bg{
     position: absolute;
     top: 0;
@@ -47,8 +46,7 @@ body{
     transform: scale(1);
     opacity: 0;
     transition: all 0.5s;
-}s
-#section0 .wrap-bg .bg.bg-1{}
+}
 #section0 .wrap-bg .bg.bg-2{
     background: url(../img/img_main_02.jpg);
 }
