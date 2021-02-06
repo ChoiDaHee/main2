@@ -11,7 +11,7 @@ $(function(){
         init(); //프리로딩 완료시점 초기 함수 실행
     }).progress(function(index, image){//프리로딩 이미지가 하나씩 로드 완료시 호출되는 중간과정 이벤트
         var _percent = Math.floor(index.progressedCount / total_img *100) //순서대로 이미지 호출 갯수 / 이미지 총수(백분률)
-        $(".wrap-loading .num").text(_percent).css("width",_percent + "%"); //프리로딩 퍼센트 숫자 표시 마크업에 퍼센트 실시간 업데이트
+        $(".wrap-loading .num").text(_percent).css("width", _percent + "%"); //프리로딩 퍼센트 숫자 표시 마크업에 퍼센트 실시간 업데이트
     });
 });
 
